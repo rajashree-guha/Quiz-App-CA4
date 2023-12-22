@@ -11,7 +11,6 @@ function App() {
   //use state and use context 
   const [currPage,setCurrPage]=useState("home")
   const [currQuestion,setCurrQuestion]=useState(0)
-  const {isDark,setIsDark}=useContext(AppContext)
   const{isCorrect,setIsCorrect}=useContext(AppContext)
 
   
@@ -23,7 +22,10 @@ function App() {
   };
 
   let result = (i,option) => {
-    if(currQuestion === 9){
+    if(currQuestion >=9){
+      if(option==Questions[i].answer){
+        setIsCorrect((prev)=>prev+1)
+      }
       setCurrPage("result");
     }
     else{
@@ -31,7 +33,6 @@ function App() {
         setIsCorrect((prev)=>prev+1)
       }
       setCurrQuestion((prevIndex) => prevIndex + 1);
-      
     }
   };
   
