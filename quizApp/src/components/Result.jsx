@@ -21,7 +21,7 @@ function Result({homePage}){
     const percentage = percent();
     if (percentage >= 90) {
       return "Congratulations! You're a quiz master!";
-    } else if (percentage >= 40) {
+    } else if (percentage >= 60) {
       return "Well done! You're on the right track.";
     } else {
       return "Keep going! There's room to improve.";
