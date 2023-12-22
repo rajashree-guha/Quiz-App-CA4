@@ -13,6 +13,17 @@ function Result({homePage}){
   }
 
   const percent =()=>((isCorrect/10)*100)
+
+  const getScoreText = () => {
+    const percentage = percent();
+    if (percentage >= 90) {
+      return "Congratulations! You're a quiz master!";
+    } else if (percentage >= 40) {
+      return "Well done! You're on the right track.";
+    } else {
+      return "Keep going! There's room to improve.";
+    }
+  };
   
 
   percent()
@@ -30,7 +41,9 @@ function Result({homePage}){
       </div>
       <div className='scorePage'>
         <h2>Final Results</h2>
+        <h3 id="msg">{getScoreText()}</h3>
         <h3>{isCorrect} out of 10 correct - ({percent()}%)</h3>
+        <div className='accuracy'><div style={{width:`${percent()}%`,backgroundColor:"#C61BCB",borderRadius:"5px"}} id='accuracyMarker'></div></div>
         <button onClick={homePage}>Restart</button>
       </div>
     </div>

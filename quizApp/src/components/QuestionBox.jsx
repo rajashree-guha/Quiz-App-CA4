@@ -14,7 +14,7 @@ function QuestionBox({ resultPage, i}) {
   }
 
   return (
-    <div className='quiz' style={{backgroundColor:isDark?"#454444":"white"}}>
+    <div className='quiz' style={{backgroundColor:isDark?"#2E2E2E":"white"}}>
        <div>
       <div>
         <div className='flex header'>

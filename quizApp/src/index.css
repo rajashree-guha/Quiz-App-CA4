@@ -50,8 +50,6 @@ body {
 }
 
 
-
-
 /*--------Quiz page---------*/
 .quiz,.result{
   width: 100vw;
@@ -72,9 +70,9 @@ body {
 }
 
 .header>button>img{
-  width: 30px;
-  height: 30px;
-  padding: 5px 3px 2px 5px;
+  width: 28px;
+  height: 26px;
+  padding: 6px 3px 2px 3px;
 }
 
 
@@ -86,7 +84,7 @@ body {
   background-color: #E6BDFF;
   border-radius: 10px;
   padding: 50px;
-  box-shadow: 0px 0px 7px 7px #c261ffb9;;
+  box-shadow: 0px 0px 7px 7px #c261ffb9;
 }
 
 /* Question No  */
@@ -169,20 +167,28 @@ body {
   width: 800px;
   height: 230px;
   border-radius: 10px;
-  border: 3px solid #9b04f9;
   padding: 50px;
+  box-shadow: 0px 0px 7px 7px #c261ffb9;
 }
 
 .scorePage>h2{
   font-size: 30px;
-  margin: 20px 0 40px 0;
+  margin: 10px 0 30px 0;
 }
 
 .scorePage>h3{
   font-size: 25px;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   color: #EE0000;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+#msg{
+  margin: 20px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.813);
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 .scorePage>button{
@@ -191,9 +197,24 @@ body {
   width: 100px;
   font-size: 18px;
   color: white;
-  background-color: #C361FF;
+  background-color: #C61BCB;
   border: none;
   }
+
+  .accuracy{
+    margin: auto;
+    width:350px;
+    height: 20px;
+    background-color:rgba(255, 255, 255, 0.63);
+    border-radius: 10px;
+    border: 2px solid #C61BCB;
+    margin-bottom: 20px;
+  }
+
+  #accuracyMarker{
+    height: 20px;
+  }
+
 
 @media screen and (max-width:480px) {
   .homeBg>h1{
@@ -210,4 +231,114 @@ body {
     width: 100px;
     font-size: 15px;
   }
+
+/*--------Quiz page---------*/
+
+/* header logo and theme button  */
+.header{
+  padding: 20px 30px;
+}
+
+.header>button{
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.header>button>img{
+  width: 20px;
+  height: 20px;
+  padding: 5px 5px 1px 5px;
+}
+
+
+/* Quiz section */
+
+.QuizPage{
+  width: 200px;
+  height: 450px;
+  margin-bottom: 20px;
+}
+
+/* Question No  */
+
+.QuizPage>div>h5{
+ font-size: 18px;
+ font-weight: 300;
+}
+
+/* Question  */
+.QuizPage>h3{
+  margin-top: 20px;
+ font-size: 20px;
+ margin-bottom: 30px;
+}
+
+/* Options  */
+.grid{
+  display: grid;
+  row-gap: 10px;
+  grid-template-columns: repeat(1,1fr);
+
+}
+
+.grid>button{
+  padding: 10px;
+  font-size: 15px;
+}
+
+
+/* Highlight options  */
+.options{
+  margin-top: 30px;
+}
+
+.options>button{
+  padding: 5px;
+  font-size: 13px;
+  width: 200px;
+}
+
+/*------Result page-------*/
+
+.themee{
+  margin:10px ;
+}
+
+.scorePage{
+  width: 200px;
+  height: 230px;
+}
+
+.scorePage>h2{
+  font-size: 25px;
+}
+
+.scorePage>h3{
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+#msg{
+  margin: -5px 0 15px 0;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.813);
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.scorePage>button{
+  font-size: 15px;
+  }
+
+  .accuracy{
+    width:150px;
+    height: 15px;
+    margin-bottom: 30px;
+  }
+
+  #accuracyMarker{
+    height: 15px;
+  }
+
 }
