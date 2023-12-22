@@ -8,12 +8,15 @@ function Result({homePage}){
   const {isDark,setIsDark}=useContext(AppContext)
   const{isCorrect,setIsCorrect}=useContext(AppContext)
 
+  // setting theme
   const theme=()=>{
     setIsDark(!isDark)
   }
 
+  // calculating  score percentage 
   const percent =()=>((isCorrect/10)*100)
 
+  //based upon the score a text will be shown
   const getScoreText = () => {
     const percentage = percent();
     if (percentage >= 90) {
@@ -26,8 +29,7 @@ function Result({homePage}){
   };
   
 
-  percent()
-
+  // html code 
   return (
     <div className='result' style={{backgroundColor:isDark?"#454444":"white"}}>
     <div>
@@ -44,6 +46,7 @@ function Result({homePage}){
         <h3 id="msg">{getScoreText()}</h3>
         <h3>{isCorrect} out of 10 correct - ({percent()}%)</h3>
         <div className='accuracy'><div style={{width:`${percent()}%`,backgroundColor:"#C61BCB",borderRadius:"5px"}} id='accuracyMarker'></div></div>
+        {/* on clicking on the button the page will change  */}
         <button onClick={homePage}>Restart</button>
       </div>
     </div>

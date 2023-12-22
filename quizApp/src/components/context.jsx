@@ -1,11 +1,11 @@
 import React, { createContext,useState } from 'react'
 
 //createContext
-
 export const AppContext = createContext()
 
 const Context =({children}) => {
 
+  //theme and correct ans 
  let [isDark, setIsDark] = useState(false)
  const[isCorrect,setIsCorrect]=useState(0)
 
